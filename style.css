@@ -1,41 +1,194 @@
+/* Tema bianco e viola */
+:root {
+    --primary-red: #8A2BE2; /* Viola primario per accenti */
+    --secondary-blue: #B388EB; /* Viola secondario più chiaro */
+    --dark-bg: #FFFFFF; /* Sfondo bianco */
+    --medium-gray: #F3F0F8; /* Grigio chiaro per sezioni */
+    --light-text: #2C2C2C; /* Testo scuro (su sfondo chiaro) */
+    --darker-gray: #F7F5FB; /* Sfondo input, display calcolatrice (chiaro) */
+}
 
-.benvenuto {
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+}
+
+.navbar {
+    background-color: var(--medium-gray) !important;
+}
+
+.navbar-brand, .nav-link, .bi-car-front-fill {
+    color: var(--light-text) !important;
+}
+
+.nav-link.active {
+    color: var(--primary-red) !important;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+/* Sezione di benvenuto */
+.hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* vh è percentuale dello schermo  */
     height: 90vh;
-    background-color: aquamarine;
+    background-color: var(--medium-gray);
+    color: var(--light-text);
+    padding: 20px;
 }
 
-.bio {
-    height: 30vh;
+.hero-section h2 {
+    font-size: 3rem;
+    color: var(--primary-red);
+}
+
+/* Sezione Bio */
+.bio-section {
+    padding: 5vh 0;
+    text-align: center;
+}
+
+.bio-text {
     display: flex;
     align-items: center;
+    min-height: 20vh;
+    font-size: 1.1rem;
+    border-left: 5px solid var(--secondary-blue);
+    padding-left: 20px;
 }
 
-.foglio {
-    border: 0.5px solid rgb(60, 60, 60);
+/* Sezione CV */
+.cv-section {
+    padding: 5vh 0;
+}
+
+.cv-sheet {
+    border: 1px solid var(--medium-gray);
+    background-color: var(--darker-gray);
     padding: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
 }
 
-.cv {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+.cv-sheet h3 {
+    color: var(--primary-red);
 }
 
-.btn {
-    width: auto;
-}
-.logo{
- width: 50%;
-
+.cv-sheet hr {
+    border-top: 1px solid var(--secondary-blue);
 }
 
-footer{
- background-color: cadetblue;
- padding: 5vh;
+/* Sezione Passioni (Card) */
+.passion-card {
+    background-color: var(--darker-gray);
+    border: 1px solid var(--medium-gray);
+    color: var(--light-text);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    height: 100%;
+}
 
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
 
+.passion-card .card-header, .passion-card .card-footer {
+    background-color: var(--medium-gray);
+    border: none;
+}
+
+.passion-card h2 {
+    color: var(--secondary-blue);
+}
+
+/* Footer */
+footer {
+    background-color: var(--medium-gray);
+    padding: 5vh;
+    color: var(--light-text);
+    margin-top: 50px;
+}
+
+footer .bi {
+    color: var(--primary-red);
+}
+
+.logo {
+    width: 50%;
+    max-width: 150px;
+}
+
+/* Sezione Stage */
+#intro h2, #stage h2 {
+    color: var(--primary-red);
+}
+
+#intro p {
+    background-color: var(--darker-gray);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid var(--primary-red);
+}
+
+.accordion-item {
+    background-color: var(--darker-gray);
+    border: 1px solid var(--medium-gray);
+}
+
+.accordion-button {
+    background-color: var(--medium-gray) !important;
+    color: var(--light-text) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--primary-red) !important;
+    background-color: var(--medium-gray) !important;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.05);
+}
+
+.accordion-body {
+    color: var(--light-text);
+}
+
+/* Sezione Extra - Progress Bar */
+#barra {
+    background-color: var(--primary-red) !important;
+}
+
+/* Sezione Extra - Calcolatrice */
+.card-calculator {
+    background-color: var(--darker-gray) !important;
+    border: 2px solid var(--primary-red) !important;
+}
+
+.card-calculator .card-header h4 {
+    color: var(--primary-red);
+}
+
+.card-calculator .btn-secondary {
+    background-color: var(--medium-gray);
+    border: 1px solid var(--dark-bg);
+    color: var(--light-text);
+}
+
+.card-calculator .btn-warning {
+    background-color: #F39C12; /* Giallo Operazioni */
+    border: none;
+    color: var(--dark-bg);
+}
+
+.card-calculator .btn-danger {
+    background-color: #C0392B; /* Rosso Clear */
+    border: none;
+}
+
+.card-calculator .btn-primary {
+    background-color: var(--secondary-blue); /* Viola Uguale */
+    border: none;
+}
+
+/* Utility */
+.mb-5 {
+    margin-bottom: 3rem !important;
 }
